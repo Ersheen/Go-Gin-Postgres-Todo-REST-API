@@ -127,13 +127,14 @@ Go-Gin-Postgres-Todo-REST-API/
 
 ### Protected Routes (Require JWT)
 
-| Method | Endpoint     | Description          |
-| ------ | ------------ | -------------------- |
-| POST   | `/todo`     | Create a new todo    |
-| GET    | `/todo`     | Get all user's todos |
-| GET    | `/todo/:id` | Get a specific todo  |
-| PUT    | `/todo/:id` | Update a todo        |
-| DELETE | `/todo/:id` | Delete a todo        |
+| Method | Endpoint                      | Description                     |
+| ------ | ----------------------------- | --------------------            |
+| POST   | `/todo`                       | Create a new todo               |
+| GET    | `/todo`                       | Get all user's todos            |
+| GET    | `/todo/:id`                   | Get a specific todo             |
+| GET    | `/todo?status=true or false ` | Get a todo based on the status  |
+| PUT    | `/todo/:id`                   | Update a todo                   |
+| DELETE | `/todo/:id`                   | Delete a todo                   |
 
 ## Request-Response Flow
 
@@ -242,14 +243,15 @@ Repository("📊 REPOSITORY<br/>━━━━━━━━━━━━━<br/>▼ 
 
 ### Todo Requests (Protected)
 
-| Request          | Method | URL                               | Body                                        |
-| ---------------- | ------ | --------------------------------- | ------------------------------------------- |
-| Create To Do     | POST   | `http://localhost:3000/todos`     | `{"title": "Learn Go", "completed": false}` |
-| Get All To Dos   | GET    | `http://localhost:3000/todos`     | -                                           |
-| Get Single To Do | GET    | `http://localhost:3000/todos/:id` | -                                           |
-| Update To Do     | PUT    | `http://localhost:3000/todos/:id` | `{"title": "Updated", "completed": true}`   |
-| Delete To Do     | DELETE | `http://localhost:3000/todos/:id` | -                                           |
-| Home Route       | GET    | `http://localhost:3000/`          | -                                           |
+| Request                    | Method | URL                                                       | Body                                        |
+| -------------------------- | ------ | --------------------------------------------------------- | ------------------------------------------- |
+| Create To Do               | POST   | `http://localhost:3000/todos`                             | `{"title": "Learn Go", "completed": false}` |
+| Get All To Dos             | GET    | `http://localhost:3000/todos`                             | -                                           |
+| Get Single To Do           | GET    | `http://localhost:3000/todos/:id`                         | -                                           |
+| Get Todo based on status   | GET    | `http://localhost:3000/todo?status=true or false`         | -                                           |
+| Update To Do               | PUT    | `http://localhost:3000/todos/:id`                         | `{"title": "Updated", "completed": true}`   |
+| Delete To Do               | DELETE | `http://localhost:3000/todos/:id`                         | -                                           |
+| Home Route                 | GET    | `http://localhost:3000/`                                  | -                                           |
 
 ### Authorization Setup
 

@@ -1,0 +1,21 @@
+# Compiled binaries
+/todo_api
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Configuration and Secrets
+.env
+config.yaml
+config.json
+
+# IDE specific files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

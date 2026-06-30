@@ -1,0 +1,2 @@
+ALTER TABLE todo_user ADD COLUMN user_id UUID NOT NULL;
+ALTER TABLE todo_user ADD CONSTRAINT fk_todos_user FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE;
